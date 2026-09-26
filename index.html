@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نرم‌افزار مدیریت مسابقات ورزشی کاکلی</title>
+    <meta name="description" content="نرم‌افزار جامع مدیریت مسابقات ورزشی کاکلی - نسخه اختصاصی فوتسال. مدیریت افراد، باشگاه‌ها، تیم‌ها، مسابقات و منشی الکترونیک زنده.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #334155;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            color: #94a3b8;
+        }
+        .header .version {
+            display: inline-block;
+            background: #0ea5e9;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            font-size: 1.4em;
+            color: #38bdf8;
+            margin-bottom: 15px;
+            padding-right: 10px;
+            border-right: 4px solid #38bdf8;
+        }
+        .section p, .section li {
+            color: #cbd5e1;
+            margin-bottom: 8px;
+        }
+        .section ul {
+            padding-right: 25px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .feature-card {
+            background: #0f172a;
+            border-radius: 10px;
+            padding: 15px;
+            border-right: 3px solid #38bdf8;
+        }
+        .feature-card h3 {
+            color: #7dd3fc;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+        .feature-card p {
+            font-size: 0.9em;
+            color: #94a3b8;
+        }
+        .download-box {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 15px;
+            border: 1px solid #334155;
+        }
+        .download-btn {
+            display: block;
+            background: #22c55e;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            transition: background 0.3s;
+        }
+        .download-btn:hover {
+            background: #16a34a;
+        }
+        .download-btn.secondary {
+            background: #3b82f6;
+        }
+        .download-btn.secondary:hover {
+            background: #2563eb;
+        }
+        .download-info {
+            font-size: 0.85em;
+            color: #64748b;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .requirements {
+            background: #0f172a;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        .requirements table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .requirements td {
+            padding: 10px;
+            border-bottom: 1px solid #1e293b;
+            color: #cbd5e1;
+        }
+        .requirements td:first-child {
+            color: #94a3b8;
+            width: 40%;
+        }
+        .warning-box {
+            background: #422006;
+            border: 1px solid #f59e0b;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .warning-box p {
+            color: #fbbf24;
+            font-size: 0.95em;
+        }
+        .contact {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 2px solid #334155;
+            margin-top: 30px;
+        }
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.85em;
+            color: #475569;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            .header h1 { font-size: 1.6em; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏆 نرم‌افزار مدیریت مسابقات ورزشی کاکلی</h1>
+            <p class="subtitle">Kakoli Sports Competition Manager</p>
+            <span class="version">نسخه 2.0.0 - اختصاصی فوتسال</span>
+        </div>
+
+        <div class="section">
+            <h2>معرفی نرم‌افزار</h2>
+            <p>نرم‌افزار مدیریت مسابقات ورزشی کاکلی یک سیستم جامع و کاربرپسند برای مدیریت تمامی جوانب برگزاری مسابقات ورزشی است. این نرم‌افزار با هدف ساده‌سازی فرآیندهای ثبت‌نام، برنامه‌ریزی، اجرا و گزارش‌گیری مسابقات طراحی شده است.</p>
+            <p>نسخه فعلی به صورت اختصاصی برای برگزاری مسابقات <strong>فوتسال</strong> طراحی شده و در آینده رشته‌های دیگر نیز اضافه خواهد شد.</p>
+        </div>
+
+        <div class="section">
+            <h2>ویژگی‌های کلیدی</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>👥 مدیریت افراد</h3>
+                    <p>ثبت و مدیریت بازیکنان، مربیان، داوران و سرپرستان با اعتبارسنجی کد ملی</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏟️ مدیریت باشگاه‌ها</h3>
+                    <p>مدیریت باشگاه‌ها، ارکان و تیم‌های زیرمجموعه</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚽ مدیریت تیم‌ها</h3>
+                    <p>ثبت تیم‌ها، اعضا، کادر فنی و شماره پیراهن بازیکنان</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏆 مدیریت مسابقات</h3>
+                    <p>ایجاد تورنومنت، برنامه‌ریزی مسابقات و مدیریت تیم‌های شرکت‌کننده</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📝 منشی الکترونیک</h3>
+                    <p>ثبت زنده رویدادهای مسابقه: گل، کارت، خطا، تایم‌اوت و ضربات پنالتی</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 گزارشات و آمار</h3>
+                    <p>صدور آیدی کارت، آلبوم تیم، گزارش مسابقات و خروجی PDF</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💾 ورود و خروجی داده</h3>
+                    <p>پشتیبانی از Excel, CSV, JSON, SQL, XML</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔐 مدیریت کاربران</h3>
+                    <p>نقش‌های مختلف: مدیر، مربی، داور، گزارشگر و بازدیدکننده</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>دانلود نرم‌افزار</h2>
+            <div class="download-box">
+                <a href="https://github.com/mehdikakoli/Kakoli-SCM/releases/download/v2.0.0/Kakoli.SCM_websetup.rar" class="download-btn">
+                    ⬇️ دانلود نسخه وب‌سایت (حدود ۵۰ مگابایت)
+                </a>
+                <p class="download-info">نصب‌کننده کوچک - پیش‌نیازها به صورت خودکار دانلود می‌شوند</p>
+
+                <a href="https://github.com/mehdikakoli/Kakoli-SCM/releases/download/v2.0.0/Kakoli.SCM_websetup.rar" class="download-btn secondary" style="margin-top: 15px;">
+                    ⬇️ دانلود نسخه کامل (حدود ۲۶۰ مگابایت)
+                </a>
+                <p class="download-info">شامل تمام پیش‌نیازها - مناسب برای نصب آفلاین</p>
+
+                <div class="warning-box">
+                    <p>⚠️ <strong>توجه:</strong> فایل‌ها به صورت فشرده (RAR) و رمزنگاری‌شده هستند. برای استخراج به رمز عبور نیاز دارید. همچنین ممکن است Windows SmartScreen هشدار نمایش دهد؛ روی "اطلاعات بیشتر" و سپس "اجرا با این وجود" کلیک کنید.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>نیازمندی‌های سیستم</h2>
+            <div class="requirements">
+                <table>
+                    <tr><td>سیستم عامل</td><td>Windows 7 یا بالاتر</td></tr>
+                    <tr><td>NET Framework</td><td>4.8 یا بالاتر</td></tr>
+                    <tr><td>SQL Server</td><td>LocalDB 2016 یا بالاتر</td></tr>
+                    <tr><td>حافظه RAM</td><td>حداقل 2 GB</td></tr>
+                    <tr><td>فضای دیسک</td><td>حداقل 500 MB</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>شروع سریع</h2>
+            <ul>
+                <li><strong>نام کاربری پیش‌فرض:</strong> admin</li>
+                <li><strong>رمز عبور پیش‌فرض:</strong> admin123</li>
+            </ul>
+            <p style="margin-top: 10px;">پس از اولین اجرا، دیتابیس به صورت خودکار ایجاد می‌شود. ۳۰ روز اول به صورت آزمایشی با تمام امکانات قابل استفاده است.</p>
+        </div>
+
+        <div class="contact">
+            <h2>ارتباط با توسعه‌دهنده</h2>
+            <p><strong>مهدی کاکلی</strong></p>
+            <p>ایمیل: <a href="mailto:mk.kakoli@gmail.com">mk.kakoli@gmail.com</a></p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #94a3b8;">برای دریافت کلید فعال‌سازی یا گزارش باگ با ما در تماس باشید</p>
+        </div>
+
+        <div class="footer">
+            <p>© ۱۴۰۴ - تمامی حقوق محفوظ است</p>
+        </div>
+    </div>
+</body>
+</html>
