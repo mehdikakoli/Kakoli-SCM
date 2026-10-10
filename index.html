@@ -161,6 +161,48 @@
         .contact a:hover {
             text-decoration: underline;
         }
+
+        /* ---------- Related Tools ---------- */
+        .related-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .tool-card {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #334155;
+            transition: transform 0.3s, border-color 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+        .tool-card .tool-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .tool-card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .tool-card p {
+            color: #94a3b8;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .tool-card .tool-link {
+            color: #22c55e;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
         .footer {
             text-align: center;
             font-size: 0.85em;
@@ -171,6 +213,7 @@
             .container { padding: 20px 15px; }
             .header h1 { font-size: 1.6em; }
             .features { grid-template-columns: 1fr; }
+            .related-tools { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -243,9 +286,9 @@
                     <p>⚠️ <strong>توجه:</strong> فایل‌ها به صورت فشرده (RAR) و رمزنگاری‌شده هستند. برای استخراج به رمز عبور نیاز دارید. همچنین ممکن است Windows SmartScreen هشدار نمایش دهد؛ روی "اطلاعات بیشتر" و سپس "اجرا با این وجود" کلیک کنید.</p>
                 </div>
                 <a href="https://github.com/mehdikakoli/Kakoli-SCM/raw/main/Rahnama.pdf" class="download-btn secondary" style="background: #8b5cf6; margin-top: 15px;">
-    📄 دانلود راهنمای کامل نرم‌افزار (PDF)
-</a>
-<p class="download-info">راهنمای نصب، فعال‌سازی و استفاده از تمام بخش‌های نرم‌افزار</p>
+                    📄 دانلود راهنمای کامل نرم‌افزار (PDF)
+                </a>
+                <p class="download-info">راهنمای نصب، فعال‌سازی و استفاده از تمام بخش‌های نرم‌افزار</p>
             </div>
         </div>
 
@@ -269,6 +312,26 @@
                 <li><strong>رمز عبور پیش‌فرض:</strong> admin123</li>
             </ul>
             <p style="margin-top: 10px;">پس از اولین اجرا، دیتابیس به صورت خودکار ایجاد می‌شود. ۳۰ روز اول به صورت آزمایشی با تمام امکانات قابل استفاده است.</p>
+        </div>
+
+        <!-- ==================== Related Tools ==================== -->
+        <div class="section">
+            <h2>🛠️ ابزارهای کمکی کاکلی</h2>
+            <p>مجموعه‌ای از ابزارهای تکمیلی برای مدیریت بهتر مسابقات ورزشی:</p>
+
+            <div class="related-tools">
+                <a href="https://mehdikakoli.github.io/Kakoli-Sport-Table/" class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <h3>Kakoli Sport Table</h3>
+                    <p>نرم‌افزار ترسیم خودکار جداول ورزشی: تک‌حذفی، دوحذفی، شانس مجدد و گروهی</p>
+                    <p style="color: #64748b; font-size: 0.85em; margin-top: 10px;">
+                        ⚽ پشتیبانی از ۴ تا ۶۴ تیم<br>
+                        🎲 قرعه‌کشی تصادفی<br>
+                        📄 خروجی مستقل Excel
+                    </p>
+                    <span class="tool-link">مشاهده و دانلود →</span>
+                </a>
+            </div>
         </div>
 
         <div class="contact">
